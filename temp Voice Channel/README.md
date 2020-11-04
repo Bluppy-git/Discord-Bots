@@ -15,3 +15,8 @@ v!links - sends Links ot the Temp Voice.
 v!info - shows general statistics.
 
 ©by Bluppy and DcBot Market
+
+Links:
+Discord https://discord.gg/dEDseCa)
+Invite the Bot https://discord.com/oauth2/authorize?client_id=745923048510849054&scope=bot&permissions=8
+Website https://dbm-alpha.netlify.app/index.html
