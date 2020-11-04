@@ -258,4 +258,4 @@ def isTempChannel(channel):
 
 # ---------------------------------------------------------------------
 
-bot.run("NzQ1OTIzMDQ4NTEwODQ5MDU0.Xz40-Q.Ouk7FoXCY-9jsAiuJE3-78amL-I")
+bot.run("")
