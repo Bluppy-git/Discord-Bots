@@ -14,7 +14,7 @@ v!botinfo - shows you information about the Temp Voice.
 v!links - sends Links ot the Temp Voice.
 v!info - shows general statistics.
 
-©by Bluppy and DcBot Market
+©by Bluppy
 
 Links:
 Bluppy Discord: https://discord.gg/PwtCQzn
