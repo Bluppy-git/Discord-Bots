@@ -21,7 +21,8 @@ bot.remove_command("help")
 
 
 tempchannels = []
-admins = []
+admins = [692483483167227916, 615549256119353345, 281106890178428928]
+# if ctx.author.id in admins:
 
 # ---------------------------------------------------------------------
 
@@ -130,7 +131,7 @@ async def help(ctx):
                                                                            f'v!links - schickt Links des Temp Voice.\r\n'
                                                                            f'v!info - Zeigt allgemeine Statistiken.\r\n'
                                                                            f'\r\n'
-                                                                           f'Besuche den [DcBot Market](https://discord.gg/dEDseCa) und unsere [Website](https://dbm-alpha.netlify.app/index.html) für mehr Informationen.',
+                                                                           f'Besuche den [Entwickler Discord](https://discord.gg/PwtCQzn)',
                               color=0xfefefe)
     if ctx.author.guild_permissions.administrator:
         embed.add_field(name='Adminbefehle', value='v!leave <guildid> - Der Bot leaved von der Guild.', inline=False)
@@ -169,7 +170,7 @@ async def botinfo(ctx):
                                   > Und das Beste: Wenn du mit dem Bot einen Channel erstellst, kannst du den Channel beliebig 
                                   > einstellen (Name, Benutzerlimit etc.)
 
-                                  Besuche den [DcBot Market](https://discord.gg/dEDseCa) und unsere [Website](https://dbm-alpha.netlify.app/index.html) für mehr Informationen.''',
+                                  Besuche den [Entwickler Discord](https://discord.gg/PwtCQzn)''',
                           color=0xfefefe)
     await ctx.channel.send(embed=embed)
 
@@ -180,9 +181,9 @@ async def links(ctx):
     if ctx.author.bot:
         return
     embed = discord.Embed(title="🔗 Links'", color=0xfefefe)
-    embed.add_field(inline=True, name='DcBot Market', value='[click here](https://discord.gg/dEDseCa)')
+    embed.add_field(inline=True, name='Entwickler Discord', value='[click here](https://discord.gg/PwtCQzn)')
     embed.add_field(inline=True, name='Invite me', value='[click here](https://discord.com/oauth2/authorize?client_id=745923048510849054&scope=bot&permissions=8)')
-    embed.add_field(inline=True, name='Website', value='[click here](https://dbm-alpha.netlify.app/index.html)')
+    embed.add_field(inline=True, name='Source code', value='[click here](https://github.com/Bluppy-git/Discord-Bots)')
     await ctx.channel.send(embed=embed)
 
 # ---------------------------------------------------------------------
@@ -195,7 +196,7 @@ async def on_ready():
     print(bot.user.name)
     print(bot.user.id)
     print('VoiceTEMP')
-    print('©by DcBot Market')
+    print('©by Bluppy')
     print('--------------------------------------')
     bot.loop.create_task(status_task())
 
@@ -206,9 +207,9 @@ async def status_task():
         await asyncio.sleep(20)
         await bot.change_presence(activity=discord.Game(bot.user.name), status=discord.Status.online)
         await asyncio.sleep(20)
-        await bot.change_presence(activity=discord.Game('Developer: https://discord.gg/dEDseCa'), status=discord.Status.online)
+        await bot.change_presence(activity=discord.Game('Developer Discord: https://discord.gg/PwtCQzn'), status=discord.Status.online)
         await asyncio.sleep(20)
-        await bot.change_presence(activity=discord.Game('Website: https://dbm-alpha.netlify.app/index.html'), status=discord.Status.online)
+        await bot.change_presence(activity=discord.Game('Developer: Bluppy'), status=discord.Status.online)
         await asyncio.sleep(20)
 
 
