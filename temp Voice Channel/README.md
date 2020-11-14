@@ -17,5 +17,4 @@ v!info - shows general statistics.
 ©by Bluppy
 
 Links:
-Bluppy Discord: https://discord.gg/PwtCQzn
 Invite the Bot https://discord.com/oauth2/authorize?client_id=745923048510849054&scope=bot&permissions=8
