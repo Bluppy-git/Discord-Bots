@@ -129,9 +129,7 @@ async def help(ctx):
                                                                            f'Entfernt den Tempchannel.\r\n'
                                                                            f'v!botinfo - zeigt dir die Information für den Temp Voice an.\r\n'
                                                                            f'v!links - schickt Links des Temp Voice.\r\n'
-                                                                           f'v!info - Zeigt allgemeine Statistiken.\r\n'
-                                                                           f'\r\n'
-                                                                           f'Besuche den [Entwickler Discord](https://discord.gg/PwtCQzn)',
+                                                                           f'v!info - Zeigt allgemeine Statistiken.\r\n',
                               color=0xfefefe)
     if ctx.author.guild_permissions.administrator:
         embed.add_field(name='Adminbefehle', value='v!leave <guildid> - Der Bot leaved von der Guild.', inline=False)
@@ -168,9 +166,7 @@ async def botinfo(ctx):
                                   > Dann wird ein Neuer Sprachkanal eröffnet, indem du dich bequem mit anderen Usern unterhalten kannst.
                                   > Sobald alle User den Chanel verlassen haben, wird der Sprachkanal wieder gelöscht 
                                   > Und das Beste: Wenn du mit dem Bot einen Channel erstellst, kannst du den Channel beliebig 
-                                  > einstellen (Name, Benutzerlimit etc.)
-
-                                  Besuche den [Entwickler Discord](https://discord.gg/PwtCQzn)''',
+                                  > einstellen (Name, Benutzerlimit etc.)''',
                           color=0xfefefe)
     await ctx.channel.send(embed=embed)
 
@@ -180,8 +176,7 @@ async def botinfo(ctx):
 async def links(ctx):
     if ctx.author.bot:
         return
-    embed = discord.Embed(title="🔗 Links'", color=0xfefefe)
-    embed.add_field(inline=True, name='Entwickler Discord', value='[click here](https://discord.gg/PwtCQzn)')
+    embed = discord.Embed(title="🔗 Links", color=0xfefefe)
     embed.add_field(inline=True, name='Invite me', value='[click here](https://discord.com/oauth2/authorize?client_id=745923048510849054&scope=bot&permissions=8)')
     embed.add_field(inline=True, name='Source code', value='[click here](https://github.com/Bluppy-git/Discord-Bots)')
     await ctx.channel.send(embed=embed)
@@ -206,8 +201,6 @@ async def status_task():
         await bot.change_presence(activity=discord.Game('Hilfe » v!help'), status=discord.Status.online)
         await asyncio.sleep(20)
         await bot.change_presence(activity=discord.Game(bot.user.name), status=discord.Status.online)
-        await asyncio.sleep(20)
-        await bot.change_presence(activity=discord.Game('Developer Discord: https://discord.gg/PwtCQzn'), status=discord.Status.online)
         await asyncio.sleep(20)
         await bot.change_presence(activity=discord.Game('Developer: Bluppy'), status=discord.Status.online)
         await asyncio.sleep(20)
