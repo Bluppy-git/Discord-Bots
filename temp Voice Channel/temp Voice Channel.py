@@ -22,8 +22,6 @@ bot.remove_command("help")
 
 tempchannels = []
 admins = []
-# if ctx.author.id in admins:
-
 # ---------------------------------------------------------------------
 
 @bot.command(pass_context=True)
@@ -155,7 +153,7 @@ async def leave(ctx, serverid):
             await ctx.channel.send(embed=embed)
 
 
-# Bot info command
+# Bot info
 @bot.command(pass_context=True)
 async def botinfo(ctx):
     if ctx.author.bot:
