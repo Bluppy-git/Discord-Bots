@@ -19,8 +19,10 @@ bot.remove_command("help")
 
 # ---------------------------------------------------------------------
 
+
 tempchannels = []
 admins = []
+# if ctx.author.id in admins:
 
 # ---------------------------------------------------------------------
 
@@ -127,7 +129,8 @@ async def help(ctx):
                                                                            f'Entfernt den Tempchannel.\r\n'
                                                                            f'v!botinfo - zeigt dir die Information für den Temp Voice an.\r\n'
                                                                            f'v!links - schickt Links des Temp Voice.\r\n'
-                                                                           f'v!info - Zeigt allgemeine Statistiken.\r\n',
+                                                                           f'v!info - Zeigt allgemeine Statistiken.\r\n'
+                                                                           f'\r\n',
                               color=0xfefefe)
     if ctx.author.guild_permissions.administrator:
         embed.add_field(name='Adminbefehle', value='v!leave <guildid> - Der Bot leaved von der Guild.', inline=False)
@@ -153,7 +156,7 @@ async def leave(ctx, serverid):
             await ctx.channel.send(embed=embed)
 
 
-# Bot info
+# Bot info command
 @bot.command(pass_context=True)
 async def botinfo(ctx):
     if ctx.author.bot:
@@ -175,8 +178,8 @@ async def links(ctx):
     if ctx.author.bot:
         return
     embed = discord.Embed(title="🔗 Links", color=0xfefefe)
-    embed.add_field(inline=True, name='Invite me', value='[click here](https://discord.com/oauth2/authorize?client_id=745923048510849054&scope=bot&permissions=8)')
-    embed.add_field(inline=True, name='Source code', value='[click here](https://github.com/Bluppy-git/Discord-Bots)')
+    embed.add_field(inline=True, name='Invite me', value='[click here](https://discord.com/oauth2/authorize?client_id=810582544541810694&scope=bot&permissions=8)')
+    embed.add_field(inline=True, name='Source code', value='[click here](https://github.com/Bluppy-git/Discord-Bots/tree/main/temp%20Voice%20Channel)')
     await ctx.channel.send(embed=embed)
 
 # ---------------------------------------------------------------------
@@ -249,4 +252,4 @@ def isTempChannel(channel):
 
 # ---------------------------------------------------------------------
 
-bot.run("")
+bot.run("[TOKEN]")
