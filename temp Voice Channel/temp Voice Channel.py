@@ -179,7 +179,6 @@ async def links(ctx):
         return
     embed = discord.Embed(title="🔗 Links", color=0xfefefe)
     embed.add_field(inline=True, name='Invite me', value='[click here](https://discord.com/oauth2/authorize?client_id=810582544541810694&scope=bot&permissions=8)')
-    embed.add_field(inline=True, name='Source code', value='[click here](https://github.com/Bluppy-git/Discord-Bots/tree/main/temp%20Voice%20Channel)')
     await ctx.channel.send(embed=embed)
 
 # ---------------------------------------------------------------------
