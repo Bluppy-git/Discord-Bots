@@ -10,7 +10,7 @@ Bot commands:
 v!addtempchannel <channelid> - Adds the channel as a tempchannel.
 v!removetempchannel <channelid> - Removes the Tempchannel.
 v!botinfo - shows you information about the Temp Voice.
-v!links - sends Links ot the Temp Voice.
+v!links - sends Links of the Temp Voice Bot.
 v!info - shows general statistics.
 
 ©by Bluppy
