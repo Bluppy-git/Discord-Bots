@@ -166,8 +166,8 @@ async def botinfo(ctx):
                                   > sobald du auf einen als Join Channel abgespeicherten Sprachkanal klickst.
                                   > Dann wird ein Neuer Sprachkanal eröffnet, indem du dich bequem mit anderen Usern unterhalten kannst.
                                   > Sobald alle User den Chanel verlassen haben, wird der Sprachkanal wieder gelöscht 
-                                  > Und das Beste: Wenn du mit dem Bot einen Channel erstellst, kannst du den Channel beliebig 
-                                  > einstellen (Name, Benutzerlimit etc.)''',
+                                  > Und das Beste: Wenn du mit dem Bot einen Channel erstellst, kannst du die Einstellungen des Channels beliebig
+                                  > bearbeiten (Name, Benutzerlimit etc.)''',
                           color=0xfefefe)
     await ctx.channel.send(embed=embed)
 
