@@ -11,7 +11,8 @@ v!addtempchannel <channelid> - Adds the channel as a tempchannel.
 v!removetempchannel <channelid> - Removes the Tempchannel.
 v!botinfo - shows you information about the Temp Voice.
 v!links - sends Links of the Temp Voice Bot.
-v!info - shows general statistics.
+v!info - shows general Bot statistics.
+v!ping - shows the reactiontime of the Bot.
 
 ©by Bluppy
 
