@@ -1,8 +1,12 @@
-from discord.ext import commands
 import os
 import json
 import asyncio
 import discord
+from discord.ext import commands
+from typing import Optional
+from PyDrocsid.util import measure_latency
+from discord import Embed
+
 
 if os.path.isfile("channels.json"):
     with open('channels.json', encoding='utf-8') as f:
@@ -130,30 +134,10 @@ async def help(ctx):
                                                                            f'v!botinfo - zeigt dir die Information für den Temp Voice an.\r\n'
                                                                            f'v!links - schickt Links des Temp Voice.\r\n'
                                                                            f'v!info - Zeigt allgemeine Statistiken.\r\n'
+                                                                           f'v!ping - Zeigt die Reaktionszeit des Bots.\r\n'
                                                                            f'\r\n',
                               color=0xfefefe)
-    if ctx.author.guild_permissions.administrator:
-        embed.add_field(name='Adminbefehle', value='v!leave <guildid> - Der Bot leaved von der Guild.', inline=False)
     await ctx.channel.send(embed=embed)
-
-
-@bot.command(pass_context=True)
-async def leave(ctx, serverid):
-    if ctx.author.bot:
-        return
-    if ctx.author.guild_permissions.administrator:
-        guild = bot.get_guild(serverid)
-        if guild:
-            embed = discord.Embed(title=f'{guild.name} geleaved.',
-                                  description="",
-                                  colour=0xfefefe)
-            await ctx.channel.send(embed=embed)
-            await guild.leave()
-        else:
-            embed = discord.Embed(title=f'Keine Guild mit der ID {serverid} gefunden.',
-                                  description="",
-                                  colour=0xfefefe)
-            await ctx.channel.send(embed=embed)
 
 
 # Bot info command
@@ -165,7 +149,7 @@ async def botinfo(ctx):
                           description='''> Der Temp Voice Bot eröffnet einen neuen Sprachkanal,
                                   > sobald du auf einen als Join Channel abgespeicherten Sprachkanal klickst.
                                   > Dann wird ein Neuer Sprachkanal eröffnet, indem du dich bequem mit anderen Usern unterhalten kannst.
-                                  > Sobald alle User den Chanel verlassen haben, wird der Sprachkanal wieder gelöscht 
+                                  > Sobald alle User den Chanel verlassen haben, wird der Sprachkanal wieder gelöscht
                                   > Und das Beste: Wenn du mit dem Bot einen Channel erstellst, kannst du die Einstellungen des Channels beliebig
                                   > bearbeiten (Name, Benutzerlimit etc.)''',
                           color=0xfefefe)
@@ -177,9 +161,18 @@ async def botinfo(ctx):
 async def links(ctx):
     if ctx.author.bot:
         return
-    embed = discord.Embed(title="🔗 Links", color=0xfefefe)
+    embed = discord.Embed(title=" Links", color=0xfefefe)
     embed.add_field(inline=True, name='Invite me', value='[click here](https://discord.com/oauth2/authorize?client_id=810582544541810694&scope=bot&permissions=8)')
     await ctx.channel.send(embed=embed)
+
+#Ping (Reaktionszeit)
+@bot.command(pass_context=True)
+async def ping(ctx):
+    latency: Optional[float] = measure_latency()
+    embed = Embed(title="Pong!", color=0xfefefe)
+    if latency is not None:
+        embed.description = ":hourglass:" + str(int(latency * 1000)) + "ms"
+    await ctx.send(embed=embed)
 
 # ---------------------------------------------------------------------
 
@@ -251,4 +244,4 @@ def isTempChannel(channel):
 
 # ---------------------------------------------------------------------
 
-bot.run("[TOKEN]")
+bot.run("[Token]")
