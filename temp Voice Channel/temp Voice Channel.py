@@ -133,7 +133,7 @@ async def help(ctx):
                                                                            f'Entfernt den Tempchannel.\r\n'
                                                                            f'v!botinfo - zeigt dir die Information für den Temp Voice an.\r\n'
                                                                            f'v!links - schickt Links des Temp Voice.\r\n'
-                                                                           f'v!info - Zeigt allgemeine Statistiken.\r\n'
+                                                                           f'v!info - Zeigt allgemeine Statistiken des Bots.\r\n'
                                                                            f'v!ping - Zeigt die Reaktionszeit des Bots.\r\n'
                                                                            f'\r\n',
                               color=0xfefefe)
