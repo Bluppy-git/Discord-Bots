@@ -15,6 +15,7 @@ v!info - shows general Bot statistics.
 v!ping - shows the reactiontime of the Bot.
 
 ©by Bluppy
-LICENSE: https://github.com/Bluppy-git/Discord-Bots/blob/main/LICENSE
+
+Project LICENSE: https://github.com/Bluppy-git/Discord-Bots/blob/main/LICENSE
 
 Invite the Bot https://discord.com/oauth2/authorize?client_id=810582544541810694&scope=bot&permissions=8
