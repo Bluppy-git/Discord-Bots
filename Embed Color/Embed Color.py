@@ -3,7 +3,7 @@ from discord.ext import commands
 
 # ---------------------------------------------------------------------
 
-bot = commands.Bot(command_prefix="!")
+bot = commands.Bot(command_prefix="c!")
 bot.remove_command("help")
 
 # ---------------------------------------------------------------------
